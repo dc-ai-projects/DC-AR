@@ -1,6 +1,12 @@
 # DC-AR: Efficient Masked Autoregressive Image Generation with Deep Compression Hybrid Tokenizer
 
+\[[Paper](TODO)\] \[[Demo](https://dc-ar.mit.edu)\] \[[Project](https://hanlab.mit.edu/projects/dc-ar)\]
+
 ![teaser_Page1](assets/teaser.png)
+
+## News
+
+- \[2025/6\] 🔥 DC-AR is accepted by ICCV 2025!
 
 ## Abstract
 
@@ -63,4 +69,10 @@ python sample.py --prompt_list [Prompt1, Prompt2, ..., PromptN] \
 
 ## Acknowledgements
 
-Our codebase is inspired by amazing open source research projects such as [1D-Tokenizer](https://github.com/bytedance/1d-tokenizer) and [MAR](https://github.com/LTH14/mar). 
+Our codebase is inspired by awesome open source research projects such as [1D-Tokenizer](https://github.com/bytedance/1d-tokenizer) and [MAR](https://github.com/LTH14/mar). Thanks for their efforts!
+
+## Citation
+
+```bibtex
+TODO
+```
