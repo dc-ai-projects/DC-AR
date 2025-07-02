@@ -1,0 +1,74 @@
+experiment:
+    tokenizer_checkpoint: "pretrained_models/tokenizer/dc_ht"
+    generator_checkpoint: "pretrained_models/generator/dc_ar_512/pytorch_model.bin"
+
+model:
+    type: vq_dc_ae
+    hybrid: True
+    quantizer_type: hybrid_vq
+    vq_model:
+        type: vq_dc_ae
+        pretrained_path: "pretrained_models/tokenizer/dc_ht"
+        codebook_size: 16384
+        token_size: 32
+        num_latent_tokens: 256
+        finetune_decoder: True
+    
+    generator:
+        type: maskgit_t2i
+        model_type: "DCAR"
+        hidden_size: 1152
+        num_hidden_layers: 28
+        num_attention_heads: 16
+        intermediate_size: 4608
+        attn_type: flash
+        ffn_type: mlp
+        qk_norm: True
+        dropout: 0.1
+        attn_drop: 0.1
+        num_steps: 12
+        class_label_dropout: 0.1
+        drop_path: 0.
+        image_seq_len: 256
+
+        # sampling hyper-params
+        guidance_scale_pow: 2.5
+        randomize_temperature: 1.5
+        guidance_scale: 4.5
+        guidance_decay: "constant"
+
+        diffusion:
+          width: 1024
+          depth: 6
+          sampler: iddpm
+          num_sampling_steps: '32'
+          batch_mul: 4
+          vae_scale: 0.107
+
+    text_model: 'google-t5/t5-base'
+    text_token_length: 300
+    context_dim: 768
+    use_llm_system_prompt: False
+
+dataset:
+    train:
+      dataset_name: pixart_wds
+      dataset_names: null
+      data_path: /home/yechengw/dataset/InternData/mjdata_v2
+      resolution: 512
+      intermediate_resolution: 576
+      per_gpu_batch_size: 64
+      mean: 0.5
+      std: 0.5
+      mj_splits: mj2_2_10M_new+mj_1-5_new+mj2_1_11M_new
+      tokenizer_path: 'google-t5/t5-base'
+      tokenizer_max_length: 300
+    eval:
+      dataset_name: mjhq
+      data_path: /home/yechengw/dataset/MJHQ-30K
+      resolution: 512
+      intermediate_resolution: 576
+      per_gpu_batch_size: 50
+      mean: 0.5
+      std: 0.5
+      no_train_aug: False
