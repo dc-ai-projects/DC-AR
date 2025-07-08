@@ -1,4 +1,4 @@
-# Copyright 2024 NVIDIA CORPORATION & AFFILIATES
+# Copyright 2025 NVIDIA CORPORATION & AFFILIATES
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,6 +15,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # This file is modified from https://github.com/PixArt-alpha/PixArt-sigma
+
 import math
 import os
 from typing import Optional
@@ -414,7 +415,7 @@ class Attention(Attention_):
 
 class FinalLayer(nn.Module):
     """
-    The final layer of Sana.
+    The final layer of DC-AR.
     """
 
     def __init__(self, hidden_size, patch_size, out_channels):
@@ -432,7 +433,7 @@ class FinalLayer(nn.Module):
 
 class T2IFinalLayer(nn.Module):
     """
-    The final layer of Sana.
+    The final layer of DC-AR.
     """
 
     def __init__(self, hidden_size, patch_size, out_channels):
@@ -448,7 +449,7 @@ class T2IFinalLayer(nn.Module):
 
 class MaskFinalLayer(nn.Module):
     """
-    The final layer of Sana.
+    The final layer of DC-AR.
     """
 
     def __init__(self, final_hidden_size, c_emb_size, patch_size, out_channels):
@@ -466,7 +467,7 @@ class MaskFinalLayer(nn.Module):
 
 class DecoderLayer(nn.Module):
     """
-    The final layer of Sana.
+    The final layer of DC-AR.
     """
 
     def __init__(self, hidden_size, decoder_hidden_size):

@@ -1,3 +1,22 @@
+# Copyright 2025 NVIDIA CORPORATION & AFFILIATES
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# This file is modified from https://github.com/bytedance/1d-tokenizer and https://github.com/NVlabs/Sana
+
+
 import math
 import json
 from pathlib import Path
@@ -16,8 +35,8 @@ from modeling.utils import tokenize_fn
 from modeling.modules.base_model import BaseModel
 from modeling.diffusion import DiffLoss
 
-from .sana.basic_modules import DWMlp, GLUMBConv, MBConvPreGLU, Mlp
-from .sana.sana_blocks import (
+from .net.basic_modules import DWMlp, GLUMBConv, MBConvPreGLU, Mlp
+from .net.blocks import (
     Attention,
     CaptionEmbedder,
     FlashAttention,
@@ -25,7 +44,7 @@ from .sana.sana_blocks import (
     MultiHeadCrossAttention,
     T2IFinalLayer,
 )
-from .sana.utils import auto_grad_checkpoint, to_2tuple
+from .net.utils import auto_grad_checkpoint, to_2tuple
 
 
 

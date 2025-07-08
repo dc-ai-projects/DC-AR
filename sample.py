@@ -108,7 +108,7 @@ def main(args):
     ).clamp_(0., 1.)
 
     total_time = time.time() - start_time
-    print(f"Generate {len(prompts)} images take {total_time:2f}s.")
+    print(f"Generating {len(prompts)} images takes {total_time:2f}s.")
 
     save_images(
         generated_images.clone(), 

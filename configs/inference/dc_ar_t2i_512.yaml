@@ -1,6 +1,6 @@
 experiment:
-    tokenizer_checkpoint: "pretrained_models/tokenizer/dc_ht"
-    generator_checkpoint: "pretrained_models/generator/dc_ar_512/pytorch_model.bin"
+    tokenizer_checkpoint: "pretrained_models/dc-ht"
+    generator_checkpoint: "pretrained_models/dc-ar-512/pytorch_model.bin"
 
 model:
     type: vq_dc_ae
@@ -8,7 +8,7 @@ model:
     quantizer_type: hybrid_vq
     vq_model:
         type: vq_dc_ae
-        pretrained_path: "pretrained_models/tokenizer/dc_ht"
+        pretrained_path: "pretrained_models/dc-ht"
         codebook_size: 16384
         token_size: 32
         num_latent_tokens: 256
