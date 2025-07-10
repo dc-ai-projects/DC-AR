@@ -1,5 +1,7 @@
 # [ICCV 2025] DC-AR: Efficient Masked Autoregressive Image Generation with Deep Compression Hybrid Tokenizer
 
+\[[Paper](https://arxiv.org/abs/2507.04947)\] \[[Demo](https://dc-ar.hanlab.ai)\] \[[Project](https://hanlab.mit.edu/projects/dc-ar)\]
+
 ## News
 
 - \[2025/6\] 🔥 DC-AR is accepted by ICCV 2025!
