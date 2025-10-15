@@ -78,7 +78,6 @@ Our codebase is inspired by awesome open source research projects such as [1D-To
 
 ## Contact
 + [Han Cai](http://hancai.ai/)
-+ [Yecheng Wu](wyc557@mit.edu)
 + [Song Han](https://hanlab.mit.edu/songhan)
 
 ## 📖 BibTeX
