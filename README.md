@@ -72,7 +72,16 @@ python sample.py --prompt_list [Prompt1, Prompt2, ..., PromptN] \
 
 Our codebase is inspired by awesome open source research projects such as [1D-Tokenizer](https://github.com/bytedance/1d-tokenizer) and [MAR](https://github.com/LTH14/mar). Thanks for their efforts!
 
-## Citation
+## License
++ [Code](./LICENSE/code)
++ [DC-AR Models](./LICENSE/dc_ar_models)
+
+## Contact
++ [Han Cai](http://hancai.ai/)
++ [Yecheng Wu](wyc557@mit.edu)
++ [Song Han](https://hanlab.mit.edu/songhan)
+
+## 📖 BibTeX
 
 ```bibtex
 @article{wu2025dcar,

@@ -21,15 +21,24 @@ from modeling.tokenizer.dc_ht import DCHT
 from utils.safety_check import is_dangerous
 import utils.demo_util as demo_util
 
-DESCRIPTION = (
-    """# DC-AR: Efficient Masked Autoregressive Image Generation with Deep Compression Hybrid Tokenizer"""
-    + """\n<p>Note: We will replace unsafe prompts with a default prompt: \"A red heart.\"</p>"""
-)
+# DESCRIPTION = (
+#     """
+#     <p><span style="font-size: 36px; font-weight: bold;">DC-AR-0.7B</span><span style="font-size: 20px; font-weight: bold;">512px</span></p>
+#     <p>DC-AR: Efficient Masked Autoregressive Image Generation with Deep Compression Hybrid Tokenizer</p>
+#     <p style="font-size: 16px; font-weight: bold;">Powered by <a href="https://hanlab.mit.edu/projects/dc-ae">DC-AE</a> and <a href="https://hanlab.mit.edu/projects/hart">HART</a></p>
+#     """ + """\n<p>Note: We will replace unsafe prompts with a default prompt: \"A red heart.\"</p>"""
+# )
+DESCRIPTION = f"""
+        <p><span style="font-size: 36px; font-weight: bold;">DC-AR-0.7B</span><span style="font-size: 20px; font-weight: bold;">512px</span></p>
+        <p style="font-size: 16px; font-weight: bold;"><a href="https://github.com/dc-ai-projects/DC-AR">DC-AR: Efficient Masked Autoregressive Image Generation with Deep Compression Hybrid Tokenizer</a></p>
+        <p style="font-size: 16px; font-weight: bold;">Powered by <a href="https://hanlab.mit.edu/projects/dc-ae">DC-AE</a>, and <a href="https://hanlab.mit.edu/projects/hart">HART</a>.</p>
+        <p style="font-size: 16px; font-weight: bold;">Unsafe word will give you a 'Red Heart❤️' in the image instead.</p>
+        """
 if not torch.cuda.is_available():
     DESCRIPTION += "\n<p>Running on CPU 🥶 This demo may not work on CPU.</p>"
 
 MAX_SEED = np.iinfo(np.int32).max
-CACHE_EXAMPLES = torch.cuda.is_available() and os.getenv("CACHE_EXAMPLES", "1") == "1"
+CACHE_EXAMPLES = False
 MAX_IMAGE_SIZE = int(os.getenv("MAX_IMAGE_SIZE", "512"))
 USE_TORCH_COMPILE = os.getenv("USE_TORCH_COMPILE", "0") == "1"
 ENABLE_CPU_OFFLOAD = os.getenv("ENABLE_CPU_OFFLOAD", "0") == "1"
@@ -119,12 +128,13 @@ def main(args):
 
     examples = [
         "melting apple",
-        "neon holography crystal cat",
-        "A dog that has been meditating all the time",
+        "A penguin wearing sunglasses on a beach.",
+        "A moonlit path through a mystical forest.",
         "An astronaut riding a horse on the moon, oil painting by Van Gogh.",
-        "8k uhd A man looks up at the starry sky, lonely and ethereal, Minimalism, Chaotic composition Op Art",
-        "Full body shot, a French woman, Photography, French Streets background, backlighting, rim light, Fujifilm.",
-        "Steampunk makeup, in the style of vray tracing, colorful impasto, uhd image, indonesian art, fine feather details with bright red and yellow and green and pink and orange colours, intricate patterns and details, dark cyan and amber makeup. Rich colourful plumes. Victorian style.",
+        "A close-up photo of a honeycomb with bees actively working, golden honey visible in cells, wings a blur of movement.",
+        "A train traveling through snowy mountains.",
+        "A plate of cookies with a glass of milk.",
+        "A close-up photo of a lotus flower emerging from muddy water, perfect pink petals opening toward sunlight, water droplets visible.",
     ]
 
     css = """
