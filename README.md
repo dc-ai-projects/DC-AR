@@ -13,6 +13,7 @@
 
 ## 🔥🔥 News
 
+- \[2025/10/18\] 🔥 We released the DC-AR code and pre-trained models.
 - \[2025/6\] 🔥 DC-AR is accepted by ICCV 2025!
 
 ## Abstract
