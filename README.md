@@ -4,8 +4,8 @@
 
 <div align="center">
   <a href="https://hanlab.mit.edu/projects/dc-ar"><img src="https://img.shields.io/static/v1?label=Website&message=DC-AR&color=darkred&logo=github-pages"></a> &ensp;
-  <a href="https://github.com/dc-ai-projects/DC-AR"><img src="https://img.shields.io/static/v1?label=Github&message=DC-AR&color=blue&logo=github"></a> &ensp;
-  <a href="https://arxiv.org/abs/2507.04947"><img src="https://img.shields.io/static/v1?label=arXiv&message=DC-AR&color=red&logo=arxiv"></a> &ensp;
+<a href="https://huggingface.co/dc-ai/dc-ar-512"><img src="https://img.shields.io/static/v1?label=HuggingFace&message=Jet-AI&color=yellow&logo=huggingface"></a> &ensp;  
+<a href="https://arxiv.org/abs/2507.04947"><img src="https://img.shields.io/static/v1?label=arXiv&message=DC-AR&color=red&logo=arxiv"></a> &ensp;
   <a href="https://dc-ar.hanlab.ai"><img src="https://img.shields.io/static/v1?label=Demo&message=DC-AR&color=yellow"></a> &ensp;
 </div>
 
