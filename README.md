@@ -2,7 +2,7 @@
 
 ### <div align="center"> ICCV 2025 <div>
 
-<div align="left">
+<div align="center">
   <a href="https://hanlab.mit.edu/projects/dc-ar"><img src="https://img.shields.io/static/v1?label=Website&message=DC-AR&color=darkred&logo=github-pages"></a> &ensp;
   <a href="https://github.com/dc-ai-projects/DC-AR"><img src="https://img.shields.io/static/v1?label=Github&message=DC-AR&color=blue&logo=github"></a> &ensp;
   <a href="https://arxiv.org/abs/2507.04947"><img src="https://img.shields.io/static/v1?label=arXiv&message=DC-AR&color=red&logo=arxiv"></a> &ensp;
